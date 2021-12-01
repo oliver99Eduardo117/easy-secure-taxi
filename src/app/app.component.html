@@ -1,0 +1,46 @@
+<ion-app>
+  <ng-container *ngIf="isAuth; else elseTemplate">
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Easy Secure Taxi</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item routerLink='/dashboard'>
+            <ion-buttons ion-item>
+              <ion-icon item-left name="home" slot="start"></ion-icon>
+              Inicio
+            </ion-buttons>
+          </ion-item>
+
+          <ion-item routerLink="/profile">
+            <ion-buttons ion-item>
+              <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+              Mi Perfil
+            </ion-buttons>
+          </ion-item>
+
+          <ion-item routerLink='/service-taxi'>
+            <ion-buttons ion-item>
+              <ion-icon name="bus" slot="start"></ion-icon>
+              Mis Servicios
+            </ion-buttons>
+          </ion-item>
+
+          <ion-item href='/message'>
+            <ion-buttons ion-item>
+              <ion-icon name="newspaper-outline" slot="start"></ion-icon>
+              Mensajes
+            </ion-buttons>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+  </ng-template>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

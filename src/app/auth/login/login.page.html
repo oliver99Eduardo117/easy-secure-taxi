@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <h1>¡Bienvenido De Nuevo!</h1>
+  <img src="/src/assets/img/undraw_navigator_a479.svg" alt="">
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="b1" type="submit" color="primary "(click)="onLogin(email, password)" expand="block">Login</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text a1">Forgot Password?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+  <span class="divider line one-line center-span or">or</span>
+  <form>
+    <ion-row>
+      <ion-col>
+        <ion-button class="b2"
+         type="submit"
+         color="danger"
+         (click)="onLoginGoogle()"
+         expand="block">
+         Login with Google <ion-icon name="logo-google-playstore"></ion-icon> 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+    <ion-col>
+      <p>
+        <a class="a1" routerLink="/registration">Create an account </a>
+      </p>
+   </ion-col>
+ </ion-row>
+</ion-content>

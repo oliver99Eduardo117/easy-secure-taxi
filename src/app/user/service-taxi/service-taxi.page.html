@@ -1,0 +1,28 @@
+<app-menu titulo="Servicios" ></app-menu>
+
+<ion-content>
+  <ion-button type="submit" (click)="newService()" expand="block">Crear</ion-button>
+  <ion-content>
+    <ion-card *ngFor="let servicio of servicios">
+      <ion-card-header>
+        <ion-label>Estatus: {{servicio.estatus}}</ion-label>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Precio: {{servicio.precio}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>distancia: {{servicio.distancia}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>tiempo: {{servicio.tiempo}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>fecha: {{servicio.fecha}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>
